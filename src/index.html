@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+<title>IT Asset Manager</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="sidebar">
+      <div class="brand">IT Asset Manager</div>
+      <button class="nav-item active" data-view="dashboard">Dashboard</button>
+      <button class="nav-item" data-view="assets">Asset Register</button>
+      <button class="nav-item" data-view="assignments">Assignments</button>
+      <button class="nav-item" data-view="maintenance">Maintenance Log</button>
+      <button class="nav-item" data-view="licenses">Software Licenses</button>
+      <button class="nav-item" data-view="pnl">P&amp;L (EBITDA)</button>
+      <button class="nav-item" data-view="lists">Lists / Settings</button>
+    </nav>
+
+    <main class="content">
+      <header class="topbar">
+        <h1 id="viewTitle">Dashboard</h1>
+        <div class="topbar-actions" id="topbarActions"></div>
+      </header>
+      <section id="viewContainer" class="view-container"></section>
+    </main>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add record</h2>
+        <button class="icon-btn" id="modalClose">&times;</button>
+      </div>
+      <form id="modalForm" class="modal-form"></form>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
